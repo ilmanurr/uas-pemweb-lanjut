@@ -1073,6 +1073,19 @@ button.btn:hover {
     outline: none;
 }
 
+/* button semua berita */
+.btn-orange {
+    background-color: #E47A2E;
+    color: #fff;
+    border-color: #E47A2E;
+}
+
+.btn-orange:hover {
+    background-color: #353535;
+    border-color: #E47A2E;
+}
+
+
 
 /**********************************/
 /*********** Sidebar CSS **********/

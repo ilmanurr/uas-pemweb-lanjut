@@ -70,7 +70,7 @@
                         <h2><i class="fas fa-align-justify"></i> Berita Terbaru</h2>
                     </div>
                     <div class="col text-right">
-                        <a href="{{ route('all.posts') }}" class="btn btn-primary">Semua Berita</a>
+                        <a href="{{ route('all.posts') }}" class="btn btn-primary btn-orange">Semua Berita</a>
                     </div>
                 </div>
                 <div class="row">
