@@ -90,9 +90,11 @@ php artisan serve
 
 # Admin
 ## Dashboard Admin
-![alt text](image.png)
+![Screenshot 2024-06-16 041607](https://github.com/ilmanurr/uas-pemweb-lanjut/assets/124539767/19b21fc6-640f-4db3-8893-4e638f13c83b)
 ## List Kategori
+![image](https://github.com/ilmanurr/uas-pemweb-lanjut/assets/124539767/d9692ae3-224c-489b-9b11-931a751222dd)
 ## Create Kategori
+![image](https://github.com/ilmanurr/uas-pemweb-lanjut/assets/124539767/a3491696-c8cc-4894-8587-279a501664ea)
 ## Update Kategori
 ## Delete Kategori
 ## List Post
