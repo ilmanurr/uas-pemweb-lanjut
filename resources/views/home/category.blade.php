@@ -20,21 +20,46 @@
                                 </div>
                                 <div class="mn-content">
                                     <a class="mn-title"
-                                        href="{{ route('detail.post', $post->id) }}">{{ Str::limit($post->title, 30) }}</a>
-                                    <a class="mn-date" href=""><i
-                                            class="far fa-clock"></i>{{ $post->created_at->format('d-M-Y') }}</a>
+                                        href="{{ route('detail.post', $post->id) }}">{{ Str::limit($post->title, 35) }}</a>
+                                    <a class="mn-date" href=""><i class="far fa-clock"></i>
+                                        {{ $post->created_at->format('d-M-Y') }}</a>
                                     <p>{{ Str::limit($post->content, 50) }} <a
                                             href="{{ route('detail.post', $post->id) }}">Baca Selengkapnya</a></p>
                                 </div>
                             </div>
                             @endforeach
                         </div>
-                        <div class="row">
-                            <div class="col-12 text-center mt-3">
-                                {{ $allPosts->links() }}
-                                <!-- Pagination -->
-                            </div>
+
+                        @if ($posts instanceof \Illuminate\Pagination\LengthAwarePaginator)
+                        <div class="pagination">
+                            <ul class="pagination-list">
+                                {{-- Previous Page Link --}}
+                                @if ($posts->onFirstPage())
+                                <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+                                @else
+                                <li class="page-item"><a href="{{ $posts->previousPageUrl() }}" class="page-link"
+                                        rel="prev">&laquo;</a></li>
+                                @endif
+
+                                {{-- Pagination Elements --}}
+                                @foreach ($posts->links()->elements[0] as $page => $url)
+                                @if ($page == $posts->currentPage())
+                                <li class="page-item active"><span class="page-link">{{ $page }}</span></li>
+                                @else
+                                <li class="page-item"><a href="{{ $url }}" class="page-link">{{ $page }}</a></li>
+                                @endif
+                                @endforeach
+
+                                {{-- Next Page Link --}}
+                                @if ($posts->hasMorePages())
+                                <li class="page-item"><a href="{{ $posts->nextPageUrl() }}" class="page-link"
+                                        rel="next">&raquo;</a></li>
+                                @else
+                                <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+                                @endif
+                            </ul>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -52,8 +77,7 @@
                                         alt="{{ $post->title }}">
                                 </div>
                                 <div class="pp-content">
-                                    <h3><a class="pp-title"
-                                            href="{{ route('detail.post', $post->id) }}">{{ $post->title }}</a></h3>
+                                    <p>{{ Str::limit($post->title, 35) }} </p>
                                     <a class="pp-date" href=""><i class="far fa-clock"></i>
                                         {{ $post->created_at->format('d-M-Y') }}</a>
                                 </div>

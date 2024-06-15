@@ -12,7 +12,7 @@
                     <img src="{{ asset('storage/img/' . $post->image) }}" alt="{{ $post->title }}" class="img-fluid" />
                 </div>
                 <div class="sn-content">
-                    <h2 class="sn-title">{{ $post->title }}</h2>
+                    <a class="sn-title">{{ $post->title }}</a>
                     <p class="sn-date"><i class="far fa-clock"></i> {{ $post->created_at->format('d-M-Y') }}</p>
                     <p>
                         {{ $post->content }}
@@ -34,8 +34,7 @@
                                         alt="{{ $post->title }}">
                                 </div>
                                 <div class="pp-content">
-                                    <h3><a class="pp-title"
-                                            href="{{ route('detail.post', $post->id) }}">{{ $post->title }}</a></h3>
+                                    <p>{{ Str::limit($post->title, 35) }} </p>
                                     <a class="pp-date" href=""><i class="far fa-clock"></i>
                                         {{ $post->created_at->format('d-M-Y') }}</a>
                                 </div>
