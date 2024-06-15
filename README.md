@@ -19,6 +19,8 @@ IENEWS adalah website berita yang dibangun dengan menggunakan Laravel. Proyek in
     - Dapat melihat data post lebih rinci tetapi tidak bisa menambahkan postingan.
     - Tidak dapat melihat, menambahkan, mengubah, dan menghapus data user.
 
+## Instalasi
+
 Ikuti langkah-langkah berikut untuk menyiapkan proyek:
 
 1. *Clone repository*:
