@@ -73,7 +73,7 @@ Setelah menyelesaikan langkah-langkah instalasi, Anda dapat memulai server penge
 
 ```bash
 php artisan serve
-
+```
 
 ## Dokumentasi
 # Auth User

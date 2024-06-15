@@ -148,7 +148,7 @@
 
             Swal.fire({
                 title: "Apakah Anda yakin ingin menghapus post ini?",
-                text: "Anda tidak akan bisa mengembalikannya!",
+                text: "Setelah dihapus, Anda tidak akan bisa mengembalikannya!",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#3085d6",
@@ -196,7 +196,7 @@
 
             Swal.fire({
                 title: "Apakah Anda yakin ingin menghapus kategori ini?",
-                text: "Anda tidak akan bisa mengembalikannya!",
+                text: "Setelah dihapus, Anda tidak akan bisa mengembalikannya!",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#3085d6",

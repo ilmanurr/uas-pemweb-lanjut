@@ -148,8 +148,8 @@
             var categoryId = $(this).data('id');
 
             Swal.fire({
-                title: "Are you sure want to delete this category?",
-                text: "You won't be able to revert this!",
+                title: "Apakah Anda yakin ingin menghapus kategori ini?",
+                text: "Setelah dihapus, Anda tidak akan bisa mengembalikannya!",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#3085d6",
@@ -166,7 +166,7 @@
                         success: function(response) {
                             Swal.fire(
                                 'Deleted!',
-                                'Your category has been deleted.',
+                                'Kategori Anda berhasil dihapus!',
                                 'success'
                             ).then((result) => {
                                 if (result.isConfirmed) {
@@ -177,7 +177,7 @@
                         error: function(xhr, ajaxOptions, thrownError) {
                             Swal.fire(
                                 'Failed!',
-                                'There was an error deleting your category',
+                                'Terdapat kesalahan dalam menghapus kategori ini',
                                 'error'
                             );
                         }
